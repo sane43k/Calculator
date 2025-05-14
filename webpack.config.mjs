@@ -3,7 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 /** @type {import('webpack').Configuration} */
 export default {
-  entry: './src/index.js',
+  entry: './src/scripts/index.js',
 
   output: {
     filename: 'bundle.js',

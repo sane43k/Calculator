@@ -38,8 +38,8 @@ export default defineConfig([
       'object-shorthand': 'warn',
       'arrow-body-style': ['warn', 'as-needed'],
       'dot-notation': 'warn',
-      'max-params': ['warn', 4],
-      'max-lines': ['warn', { max: 150 }],
+      'max-params': ['warn', 2],
+      'max-lines': ['warn', { max: 200 }],
     },
   },
 ]);
