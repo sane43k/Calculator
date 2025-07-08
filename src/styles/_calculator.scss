@@ -7,6 +7,17 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   overflow: hidden;
+  &.scientific {
+    width: 696px;
+    .calculator__btns {
+      grid-template-columns: repeat(8, 1fr);
+      button {
+        &.scientificBtn {
+          display: inline-block;
+        }
+      }
+    }
+  }
   &__input {
     height: 95px;
     width: 100%;
@@ -37,6 +48,9 @@
       background-color: vars.$btn-gray;
       border: none;
       padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       &:hover {
         background-color: vars.$btn-gray-dark;
@@ -44,20 +58,23 @@
       &:active {
         opacity: 0.7;
       }
-      &:not(:nth-child(n + 4)) {
+      &[data-value='0'] {
+        grid-column: span 2;
+      }
+      &.btn-gray-dark {
         background-color: vars.$btn-gray-dark;
         &:hover {
           background-color: vars.$btn-gray;
         }
       }
-      &:nth-child(17) {
-        grid-column: span 2;
+      &.btn-orange {
+        background-color: vars.$btn-orange;
+        &:hover {
+          background-color: vars.$btn-orange-dark;
+        }
       }
-    }
-    .btn-orange {
-      background-color: vars.$btn-orange;
-      &:hover {
-        background-color: vars.$btn-orange-dark;
+      &.scientificBtn {
+        display: none;
       }
     }
   }

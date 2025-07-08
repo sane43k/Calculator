@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import globals from 'globals';
+import eslintPluginJest from 'eslint-plugin-jest';
 import prettierPlugin from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import { defineConfig } from 'eslint/config';
@@ -26,7 +27,7 @@ export default defineConfig([
     rules: {
       ...prettierPlugin.configs.recommended.rules,
       ...eslintConfigPrettier.rules,
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-undef': 'error',
       'no-var': 'error',
       'prefer-const': 'error',
@@ -39,7 +40,21 @@ export default defineConfig([
       'arrow-body-style': ['warn', 'as-needed'],
       'dot-notation': 'warn',
       'max-params': ['warn', 2],
-      'max-lines': ['warn', { max: 200 }],
+      'max-lines': ['warn', { max: 265 }],
+    },
+  },
+  {
+    files: ['**/*.test.js', '**/*.spec.js'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+    },
+    plugins: {
+      jest: eslintPluginJest,
+    },
+    rules: {
+      ...eslintPluginJest.configs.recommended.rules,
     },
   },
 ]);

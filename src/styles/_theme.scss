@@ -1,23 +1,6 @@
 @use './vars';
 
 body {
-  .btn-theme {
-    font-family: sans-serif;
-    font-size: 16px;
-    color: vars.$white;
-    background-color: vars.$input-gray;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    border: none;
-    border-radius: 10px;
-    padding: 15px 25px;
-    cursor: pointer;
-    &:hover {
-      background-color: vars.$btn-gray-dark;
-    }
-    &:active {
-      opacity: 0.7;
-    }
-  }
   &.light {
     background-color: vars.$bg-light;
     .calculator {
@@ -34,18 +17,18 @@ body {
           &:hover {
             background-color: vars.$btn-gray-light;
           }
-          &:not(:nth-child(n + 4)) {
+          &.btn-gray-dark {
             background-color: vars.$btn-gray-light;
             &:hover {
               background-color: vars.$white;
             }
           }
-        }
-        .btn-orange {
-          color: vars.$white;
-          background-color: vars.$btn-orange;
-          &:hover {
-            background-color: vars.$btn-orange-dark;
+          &.btn-orange {
+            color: vars.$white;
+            background-color: vars.$btn-orange;
+            &:hover {
+              background-color: vars.$btn-orange-dark;
+            }
           }
         }
       }

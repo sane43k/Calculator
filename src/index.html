@@ -11,31 +11,71 @@
         <input type="text" />
       </div>
       <div class="calculator__btns">
-        <button type="button" data-value="clear">AC</button>
-        <button type="button" data-value="toggle-sign">±</button>
-        <button type="button" data-value="percentage">%</button>
+        <button type="button" data-value="memory-clear" class="btn-gray-dark scientificBtn">
+          mc
+        </button>
+        <button type="button" data-value="memory-plus" class="btn-gray-dark scientificBtn">
+          m+
+        </button>
+        <button type="button" data-value="memory-minus" class="btn-gray-dark scientificBtn">
+          m-
+        </button>
+        <button type="button" data-value="memory-recall" class="btn-gray-dark scientificBtn">
+          mr
+        </button>
+
+        <button type="button" data-value="clear" class="btn-gray-dark">AC</button>
+        <button type="button" data-value="toggle-sign" class="btn-gray-dark">±</button>
+        <button type="button" data-value="percentage" class="btn-gray-dark">%</button>
         <button type="button" data-value="/" class="btn-orange">÷</button>
+
+        <button type="button" data-value="square" class="btn-gray-dark scientificBtn">x²</button>
+        <button type="button" data-value="cube" class="btn-gray-dark scientificBtn">x³</button>
+        <button type="button" data-value="power" class="btn-gray-dark scientificBtn">
+          x<sup>y</sup>
+        </button>
+        <button type="button" data-value="ten-power-x" class="btn-gray-dark scientificBtn">
+          10<sup>x</sup>
+        </button>
 
         <button type="button" data-value="7">7</button>
         <button type="button" data-value="8">8</button>
         <button type="button" data-value="9">9</button>
         <button type="button" data-value="*" class="btn-orange">×</button>
 
+        <button type="button" data-value="inverse" class="btn-gray-dark scientificBtn">1/x</button>
+        <button type="button" data-value="sqrt" class="btn-gray-dark scientificBtn">√x</button>
+        <button type="button" data-value="cbrt" class="btn-gray-dark scientificBtn">³√x</button>
+        <button type="button" data-value="yth-root" class="btn-gray-dark scientificBtn">ʸ√x</button>
+
         <button type="button" data-value="4">4</button>
         <button type="button" data-value="5">5</button>
         <button type="button" data-value="6">6</button>
         <button type="button" data-value="-" class="btn-orange">-</button>
+
+        <button type="button" data-value="factorial" class="btn-gray-dark scientificBtn">x!</button>
+        <button type="button" class="btn-gray-dark scientificBtn">-</button>
+        <button type="button" class="btn-gray-dark scientificBtn">-</button>
+        <button type="button" class="btn-gray-dark scientificBtn">-</button>
 
         <button type="button" data-value="1">1</button>
         <button type="button" data-value="2">2</button>
         <button type="button" data-value="3">3</button>
         <button type="button" data-value="+" class="btn-orange">+</button>
 
+        <button type="button" class="btn-gray-dark scientificBtn">-</button>
+        <button type="button" class="btn-gray-dark scientificBtn">-</button>
+        <button type="button" class="btn-gray-dark scientificBtn">-</button>
+        <button type="button" class="btn-gray-dark scientificBtn">-</button>
+
         <button type="button" data-value="0">0</button>
         <button type="button" data-value=".">.</button>
         <button type="button" data-value="=" class="btn-orange">=</button>
       </div>
     </div>
-    <button type="button" class="btn-theme">Theme</button>
+    <div class="btns-wrapper">
+      <button type="button" class="btn" id="scientificModeBtn">Scientific</button>
+      <button type="button" class="btn" id="themeBtn">Theme</button>
+    </div>
   </body>
 </html>
